@@ -2,12 +2,12 @@
 var pizzaToppings= [];
 
 function Pizza(pizzaSize, pizzaToppings) {
-  this.pizzaSize= pizzaSize;
-  this.pizzaToppings= pizzaToppings;
-  this.pizzaCost=0;
-}
+  this.pizzaSize = pizzaSize;
+  this.pizzaToppings = pizzaToppings;
+  this.pizzaCost = 0;
+};
 
-Pizza.prototype.pizzaCost = function() {
+Pizza.prototype.pizzaTotal = function() {
   if (this.pizzaSize === 9) {
     this.pizzaCost += 9;
   }else if (this.pizzaSize === 12) {
@@ -37,7 +37,7 @@ $(document).ready(function() {
       pizzaToppings.push($(this).val());
     });
 
-    newPizza.pizzaCost();
+    newPizza.pizzaTotal();
     console.log(newPizza);
 
     $(".bottom").show();
