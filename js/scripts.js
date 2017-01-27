@@ -30,6 +30,10 @@ $(document).ready(function() {
     $(".bottom").show();
     $("#priceOutput").text(newPizza.pizzaCost.toFixed(2));
 
+    $("#delivery").click(function() {
+      event.preventDefault();
+      $("#form2").show();
+    });
 
   });
 });
