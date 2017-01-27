@@ -1,4 +1,6 @@
 //Business Logic
+var toppingsArray= [];
+
 
 function Pizza(size, topings) {
   this.size= size;
@@ -13,10 +15,11 @@ $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
 
-    var toppingsArray= [];
     var size= parseInt($("#pizzaSize option:selected").val());
-    console.log($("#pizzaSize option:selected").val());
 
+    $("input:checkbox[name=topping]:checked").each(function() {
+      toppingsArray.push(parseInt($(this).val()));
+    })
 
   });
 });
