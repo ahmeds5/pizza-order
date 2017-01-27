@@ -2,7 +2,8 @@
 
 #### _Week 4 Code Review: Object Oriented Javascript Independent Project._
 
-#### By _**Said Ahmed**_
+#### By: _**Said Ahmed**_
+_https://ahmeds5.github.io/pizza-order/_
 
 ## Description
 
