@@ -50,7 +50,7 @@ $(document).ready(function() {
         var inputtedCity = $(".city").val();
         var inputtedState = $(".state").val();
 
-        var newDelivery = new Delivery(inputtedStreet, inputtedCity, inputtedStreet);
+        var newDelivery = new Delivery(inputtedStreet, inputtedCity, inputtedState);
         newDelivery.fullAddress();
         $(".output").show();
         $(".address").text(newDelivery.fullAddress());
