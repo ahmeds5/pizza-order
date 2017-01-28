@@ -12,6 +12,15 @@ Pizza.prototype.pizzaTotal = function () {
 
 };
 
+function Delivery(street, city, state) {
+  this.street = street;
+  this.city = city;
+  this.state = state;
+}
+
+Delivery.prototype.fullAddress = function() {
+  return this.street + ", " + this.city + ", " + this.state;
+}
 
 //User Logic
 $(document).ready(function() {
@@ -34,6 +43,17 @@ $(document).ready(function() {
       event.preventDefault();
       $("#form2").show();
     });
-
   });
+      $("#form2").submit(function() {
+        event.preventDefault();
+        var inputtedStreet = $(".street").val();
+        var inputtedCity = $(".city").val();
+        var inputtedState = $(".state").val();
+
+        var newDelivery = new Delivery(inputtedStreet, inputtedCity, inputtedStreet);
+        newDelivery.fullAddress();
+        $(".output").show();
+        $(".address").text(newDelivery.fullAddress());
+
+      });
 });

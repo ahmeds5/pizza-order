@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Lakki+Reddy" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.js"
-  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-  crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
-  <title>Pizza Order</title>
-</head>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lakki+Reddy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Order</title>
+  </head>
   <body background= "images/mario.jpg">
     <div class="container">
       <div class="first">
@@ -71,22 +71,34 @@
         </div>
         <form id="form2">
           <div class="deliveryAddress">
-            <div class="form-group">
-              <label for="new-street">Street</label>
-              <input type="text" class="form-control new-street">
-            </div>
-            <div class="form-group">
-              <label for="new-city">City</label>
-              <input type="text" class="form-control new-city">
-            </div>
-            <div class="form-group">
-              <label for="new-state">State</label>
-              <input type="text" class="form-control new-state">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="new-street">Street</label>
+                  <input type="text" class="form-control street">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="new-city">City</label>
+                  <input type="text" class="form-control city">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="new-state">State</label>
+                  <input type="text" class="form-control state">
+                </div>
+              </div>
             </div>
           </div>
           <br>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <div class="output">
+          <h3>Thank you! Your order will be delivered to:<br> <span class="address"></span>.</h3>
+
+        </div>
       </div>
 
     </div>
