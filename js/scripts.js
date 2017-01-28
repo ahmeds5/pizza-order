@@ -16,11 +16,11 @@ function Delivery(street, city, state) {
   this.street = street;
   this.city = city;
   this.state = state;
-}
+};
 
 Delivery.prototype.fullAddress = function() {
   return this.street + ", " + this.city + ", " + this.state;
-}
+};
 
 //User Logic
 $(document).ready(function() {
@@ -55,5 +55,8 @@ $(document).ready(function() {
         $(".output").show();
         $(".address").text(newDelivery.fullAddress());
 
+        $(".street").val("");
+        $(".city").val("");
+        $(".state").val("");
       });
 });
